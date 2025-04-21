@@ -8,8 +8,7 @@ https://github.com/Maccraft123/Cadmium/releases
 
 . flash to card
 . expand filesystem
-sudo growpart /dev/sda 3
-sudo resize.f2fs /dev/sda3
+sudo apt install cloud-guest-utils && sudo apt install f2fs-tools && sudo growpart /dev/sda 3 && sudo resize.f2fs /dev/sda3
 
 . apt install sudo  # install sudo 
 . edit config file to bookworm instead of Sid
