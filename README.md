@@ -7,6 +7,14 @@ Debian on Asus C101 - see also wiki for extra background and sources
 https://github.com/Maccraft123/Cadmium/releases
 
 . flash to card
+
+. activate wifi
+ip -a #look for device name
+
+ip link set [device_name] up
+nmtui
+click activate and find right wifi-point
+
 . expand filesystem
 sudo apt install cloud-guest-utils && sudo apt install f2fs-tools && sudo growpart /dev/sda 3 && sudo resize.f2fs /dev/sda3
 
