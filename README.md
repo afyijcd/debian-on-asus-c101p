@@ -16,7 +16,10 @@ nmtui
 click activate and find right wifi-point
 
 . expand filesystem
-sudo apt install cloud-guest-utils && sudo apt install f2fs-tools && sudo growpart /dev/sda 3 && sudo resize.f2fs /dev/sda3
+sudo apt install cloud-guest-utils && sudo apt install f2fs-tools && sudo growpart /dev/sda 3 
+
+. reboot into other debian install (/dev/sda3 cannot be mounted when resizing)
+sudo resize.f2fs /dev/sda3
 
 . apt install sudo  # install sudo 
 . edit config file to bookworm instead of Sid
